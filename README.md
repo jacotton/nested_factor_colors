@@ -17,19 +17,21 @@ test1 <- cbind(test1,colors_picked)
 
 **nested_factor_colors3(factors,initial_mult=30,use_kmeans=T)**
 
-#### Parameters:
+#### Parameters
 
 - factors: is a dataframe with >=1 columns of factors that are nested, with the most incluisve in column 1 and the next in column 2 etc.
 - initial_mult: the number of candidate colors picked initially for each lowest-level factor level.
 - use_kmeans: use simple kmeans if TRUE, otherwise use trimmed kmeans, trimming 10%
 
-### return value: a list of 3 objects - 
+### return value
+
+a list of 3 objects:
 - colors: a vector of RGB colors names for the lowest-level factors. This is probably what you want
 - HCLobj: a vector of 'HCL' objects - internal to the colorspace library, but useful if you are messing about with the output colors
 - names: the names of the corresponding lowest-level colors, in the input order
 
 
-#### Caveats: 
+#### Caveats
 - not tested if you mess up and the factors aren't nested.. 
 - if you get errors with 'empty cluster has been detected' then try increasing
 initial_mult - the number of candidate points tried for each point the algorithm  returns.. I think this will only happen with really big sets of colors and with use_kmeans=FALSE
