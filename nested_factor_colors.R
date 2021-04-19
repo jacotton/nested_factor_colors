@@ -9,7 +9,7 @@ library(tclust)
 test1 <- data.frame(continents=c(rep("Asia",5),rep("Europe",3),rep("Africa",4)),region=c(rep("East Asia",3),"South Asia","South Asia","Iberian","Iberian","East Europe","Soutern Africa","Southern Africa","East Africa","East Africa"),countries=c("Japan","Korea","China","India","Nepal","Spain","Portugal","Poland","Lesotho","Botswana","Ethiopia","Eritrea"))
 
 #input is a dataframe with >=1 columns of factors that are nested, with the most
-#incluisve in column 1 and the next in column 2 etc.
+#inclusive in column 1 and the next in column 2 etc.
 #not tested if you mess up and the factors aren't nested.. 
 #e.g. if a level 3 factor is in a level 1 different from others in the same level 2 category.
 #
